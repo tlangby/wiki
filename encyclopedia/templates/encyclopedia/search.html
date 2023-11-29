@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block body %}
+    <h3>The following entries match your search criteria:</h3>
+    
+    <ul>
+        {% for entry in wiki_list %}
+            <li><a href=wiki/{{entry}}>{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
